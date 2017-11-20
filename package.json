@@ -1,0 +1,14 @@
+{
+  "name": "armada-2017-lighting-talk",
+  "version": "1.0.0",
+  "description": "A short live coding session where get to see just how much can be done using pure CSS in modern web browsers.",
+  "main": "server.js",
+  "author": "Max Nordlund <max.nordlund@refernza.com>",
+  "license": "MIT",
+  "dependencies": {
+    "connect": "^3.6.5",
+    "livereload": "^0.6.3",
+    "morgan": "^1.9.0",
+    "serve-static": "^1.13.1"
+  }
+}
