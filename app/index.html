@@ -2,11 +2,54 @@
 <html>
   <head>
     <title>For fun and Pseudo-profit</title>
-    <script src="http://localhost:35729/livereload.js?snipver=1"></script>
+    <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
-    <h1>For fun and Pseudo-profit</h1>
-    <p>A short live coding session where get to see just how much can be done
-      using pure CSS in modern web browsers.</p>
+    <header>
+      <aside>
+        <img alt="Profile picture" src="images/profile.svg" />
+        <nav>
+          <a href="#flowers">Flowers</a>
+          <a href="#trees">Trees</a>
+          <a href="#herbs">Herbs</a>
+          <hr />
+          <a href="#settings">Settings</a>
+          <a href="#feedback">Feedback</a>
+          <a href="#help">Help</a>
+        </nav>
+        <footer>
+          <p>Copyleft Referanza AB 2017</p>
+          <p><a href="https://opensource.org/licenses/MIT">MIT License</a></p>
+      </footer>
+      </aside>
+    </header>
+    <main>
+      <figure id="flowers">
+        <img alt="Picture of three purple-blue flowers" src="images/campanilla-china-ampliacion.jpg" />
+        <figcaption>
+          Platycodon grandiflorus, Chinese bellflower
+        </figcaption>
+      </figure>
+      <figure id="trees">
+        <img alt="Picture of a maple tree during autumn" src="images/autumn-tree.jpg" />
+        <figcaption>
+          Acer pseudoplatanus, Maple tree
+        </figcaption>
+      </figure>
+      <figure id="herbs">
+        <img alt="Picture of a rosemary field" src="images/rosemary-memoru.jpg" />
+        <figcaption>
+          Rosmarinus officinalis, Rosemary
+        </figcaption>
+      </figure>
+      <div id="default">
+        <h1>Choose a plant type</h1>
+        <nav>
+          <a href="#flowers">Flowers</a>
+          <a href="#trees">Trees</a>
+          <a href="#herbs">Herbs</a>
+        </nav>
+      </div>
+    </main>
   </body>
 </html>
