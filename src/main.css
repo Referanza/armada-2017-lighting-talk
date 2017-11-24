@@ -1,5 +1,9 @@
 /* Main style sheet */
 
+:root {
+  --side-menu-width: 40vw;
+}
+
 html,
 body {
   font-size: 38pt;
@@ -16,6 +20,91 @@ header {
   height: 2rem;
   padding: 10px 0.5rem;
   border-bottom: 1px solid grey;
+
+  & input[type="checkbox"] {
+    display: none;
+
+    &:checked {
+      & + label {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      & ~ aside {
+        left: 0;
+
+        &::before {
+          left: var(--side-menu-width);
+          background: rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+  }
+
+  & aside::before {
+    content: "";
+    display: block;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    pointer-events: none;
+    background: transparent;
+    transition: background 0.50s, left 0.50s;
+  }
+
+  & aside {
+    display: flex;
+    flex-flow: column;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(-1 * var(--side-menu-width));
+    transition: left 0.50s;
+
+    height: 100vh;
+    width: var(--side-menu-width);
+
+    background: white;
+
+    & footer {
+      font-size: 24pt;
+      text-align: center;
+    }
+  }
+
+  & nav {
+    flex: 1;
+
+    & a {
+      font-size: 0.8rem;
+      height: 1.2rem;
+      line-height: 1.2rem;
+      text-align: left;
+      vertical-align: middle;
+      padding-left: 1.2rem;
+
+      color: black;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  & img {
+    height: auto;
+    padding: 10px 10px 0;
+    border-bottom: 3px solid lightgrey;
+  }
 }
 
 nav {
