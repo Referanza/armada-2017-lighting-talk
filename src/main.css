@@ -23,11 +23,47 @@ nav {
   flex-flow: column;
 }
 
+main > * {
+  display: none;
+
+  &:not(:target) ~ #default {
+    display: block;
+  }
+
+  &:target {
+    display: block;
+
+    & ~ #default {
+      display: none;
+    }
+  }
+}
+
 figure {
   margin: 5px;
   padding: 0;
 
   & > figcaption {
     height: 1rem;
+  }
+}
+
+#default {
+  & h1 {
+    margin-top: 20vh;
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
+
+  & nav {
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  & a {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
